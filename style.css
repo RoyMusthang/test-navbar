@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  color: #f2f2f2;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #00339e;
+}
+nav{
+  background: #00339e;
+  padding: 10px 40px 10px 70px;
+  border-left: none;
+  border-right: none;
+}
+a {
+  font-size: 12px;
+}
+p {
+  color: white;
+}
+.items {
+  display: flex;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 30px;
+}
+.login-conteiner {
+  background: #00339e;
+  display: flex;
+  padding: 10px;
+  border-radius: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-conteiner li a{
+  color: #ffba00;
+  text-decoration: underline;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+li a{
+  text-decoration: none;
+  color: #00339e;
+  font-size: 17px;
+  padding: 0 12px;
+}
+nav ul div.items a:hover{
+  color: cyan;
+}
+nav ul li.btn{
+  font-size: 29px;
+  flex: 1;
+  padding: 0 40px;
+  display: none;
+}
+nav ul li.btn span{
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  line-height: 42px;
+  border: 1px solid #151515;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav ul li.btn span.show:before{
+  content: '\f00d';
+}
+.traço {
+  content: "";
+  width: 2px;
+  height: 18px;
+  background: #00339e;
+}
+
+@media screen and (max-width: 800px){
+  nav ul li.btn{
+    display: block;
+  }
+  nav{
+    padding: 10px 10px 10px 0px;
+  }
+  nav ul li.logo{
+    display: none;
+  }
+  nav ul div.items{
+    flex: 4;
+  }
+  nav{
+    z-index: 1;
+    padding: 0;
+  }
+  .traço {
+    display: none;
+  }
+  nav ul div.items{
+    z-index: -1;
+    position: fixed;
+    top: -520px;
+    right: 0;
+    width: 100%;
+    background: white;
+    display: inline-block;
+    transition: top .4s;
+  }
+  .login-conteiner {
+    display: flex;
+    justify-content: space-evenly;    
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 25px;
+  }
+  .login-conteiner li p {
+    padding: 0 -10px 0 -10px;
+  }
+  nav ul div.items.show{
+    top: 60px;
+  }
+  nav ul div.items li{
+    text-align: center;
+    line-height: 30px;
+    margin: 30px 0;
+  }
+  nav ul div.items li a{
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 405px) {
+  nav ul{
+    flex-wrap: nowrap;
+  }
+
+  .login-conteiner {
+    display: flex;
+    justify-content: space-evenly;    
+    align-items: center;
+    width: 100%;
+    height: 25px;
+  }
+  .login-conteiner a{
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    font-size: 10px;
+  }
+  nav ul li input{
+    width: 40vmin;
+  }
+  nav{
+    padding: 10px 40px 10px 0px;
+  }
+  nav ul li.logo{
+    display: none;
+  }
+  nav ul div.items{
+    flex: 4;
+  }
+ 
+}
